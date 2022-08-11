@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/homepage.dart';
+import 'package:flutter_application_1/image.dart';
 import 'package:flutter_application_1/mamu.dart';
+import 'package:flutter_application_1/carddetails.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -13,188 +15,48 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         body: ListView(
           children: [
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Jackie Chan",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("Chinese Actor"),
-                trailing: IconButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return HomePage();
-                    }));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                  backgroundImage: AssetImage("assets/photo1.jpg"),
-                ),
-              ),
+            CardDetails(
+              actorName: "Jackie Chan",
+              actorNamesub: "Chinese Actor",
+              actorimgl: jacki,
             ),
-            SizedBox(
-              height: 12,
+            sizebox(),
+            CardDetails(
+              actorNamesub: "Indian Actor",
+              actorName: "Mammooty",
+              actorimgl: mamo,
             ),
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Mammootty",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("Indian Actor"),
-                trailing: IconButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return Mamnupage();
-                    }));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/photo2.jpg")),
-              ),
+            sizebox(),
+            CardDetails(
+              actorNamesub: "Indian Actor",
+              actorName: "Mohanlal",
+              actorimgl: mohal,
             ),
-            SizedBox(
-              height: 12,
-            ),
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Mohanlal",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("Indian Actor"),
-                trailing: IconButton(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text("Details Are Not Found !"),
-                      backgroundColor: Colors.red,
-                    ));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/photo3.jpeg")),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Shah Rukh Khan",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("Indian Actor"),
-                trailing: IconButton(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text("Details Are Not Found !"),
-                      backgroundColor: Colors.red,
-                    ));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/photo4.jpg")),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Vijay",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("Indian Actor"),
-                trailing: IconButton(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text("Details Are Not Found !"),
-                      backgroundColor: Colors.red,
-                    ));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/photo6.jpg")),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Prithviraj Sukumaran",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text(" Actor & Director "),
-                trailing: IconButton(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text("Details Are Not Found !"),
-                      backgroundColor: Colors.red,
-                    ));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/photo5.jpg")),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Tovino Thomas",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("Indian Actor "),
-                trailing: IconButton(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text("Details Are Not Found !"),
-                      backgroundColor: Colors.red,
-                    ));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/photo8.jpg")),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Card(
-              child: ListTile(
-                title: Text(
-                  "Basil Joseph",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text("Actor & Director"),
-                trailing: IconButton(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text("Details Are Not Found !"),
-                      backgroundColor: Colors.red,
-                    ));
-                  },
-                  icon: Icon(Icons.more_horiz),
-                ),
-                leading: CircleAvatar(
-                    backgroundImage: AssetImage("assets/photo7.jpg")),
-              ),
-            ),
+            sizebox(),
+            CardDetails(
+                actorNamesub: "Indian Actor",
+                actorName: "Shah Rukh Khan",
+                actorimgl: sharu),
+            sizebox(),
+            CardDetails(
+                actorNamesub: "Indian Actor",
+                actorName: "Vijay",
+                actorimgl: suku),
+            sizebox(),
+            CardDetails(
+                actorNamesub: "Indian Actor & Director",
+                actorName: "Prithviraj Sukumaran",
+                actorimgl: vij),
+            sizebox(),
+            CardDetails(
+                actorNamesub: "Indian Actor ",
+                actorName: "Tovino Thomas",
+                actorimgl: basil),
+            sizebox(),
+            CardDetails(
+                actorNamesub: "Actor & Director",
+                actorName: "Basil joseph",
+                actorimgl: tovi)
           ],
         ));
   }

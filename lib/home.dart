@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
             sizebox(),
             CardDetails(
               actorNamesub: "Indian Actor",
-              actorName: "Mammooty",
+              actorName: "Mammootyyyyyyyyyy",
               actorimgl: mamo,
             ),
             sizebox(),

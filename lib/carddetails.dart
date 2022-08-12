@@ -12,10 +12,11 @@ class CardDetails extends StatelessWidget {
 
   String messageBox = "Details Are Not Found !";
 
-  CardDetails(
-      {required this.actorNamesub,
-      required this.actorName,
-      required this.actorimgl});
+  CardDetails({
+    required this.actorNamesub,
+    required this.actorName,
+    required this.actorimgl,
+  });
 
   @override
   Widget build(BuildContext context) {
